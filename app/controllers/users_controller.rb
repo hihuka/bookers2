@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
 
-  def new
-    @user_image = UserImage.new
-
-  end
-
   def index
     @users = User.all
     @user = current_user
@@ -12,14 +7,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_image = @user_images
-  end
-
-  def create
-    @user_images = UserImage.new(user_image_params)
-    @user_images.user_id = current_user.id
-    @user_images.save
-    redirect_to user_images_path
   end
 
   def edit

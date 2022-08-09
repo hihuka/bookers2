@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
 
   <body>
@@ -36,10 +46,7 @@
           </li>
 
         </ul>
-          <% if user_signed_in? %>
-          <p>ログインできています！</p>
-          <% end %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete , class: 'nav-link text-light'%>
+          <%= link_to "Logout", destroy_user_session_path, method: :get , class: 'nav-link text-light'%>
 
       </div>
     </div>
@@ -48,3 +55,4 @@
   </header>
     <%= yield %>
   </body>
+</html>
