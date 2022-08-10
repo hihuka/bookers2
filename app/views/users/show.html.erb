@@ -1,6 +1,18 @@
-<div>
-  <%= image_tag @user.get_profile_image %>
-  <p>name：<%= @user.name %></p>
-  <p>introduction：<%= @user.caption %></p>
-  <p>投稿ユーザー画像：<%= image_tag @user_image.user.get_profile_image(100,100) %></p>
-</div>
+<h2>Books</h2>
+<table>
+   <thead>
+      <tr>
+        <th>Title</th>
+        <th>opinion</th>
+        <th colspan="3"></th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <tr>
+        <td><%= image_tag @user.profile_image, size: "width,height" %></td>
+        <td></td>
+        <td></td>
+      </tr>
+   </tbody>
+</table>
