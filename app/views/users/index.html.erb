@@ -8,14 +8,10 @@
   <% end %>
 
   <p>name</p>
-  <span>
-
-  </span>
+  <span><%= @user %></span>
 
   <p>introduction</p>
-  <span>
-
-  </span>
+  <span></span>
 
 <%= form_with model: @user,ul:'users/:id' ,method: :post do |f| %>
 
@@ -33,8 +29,8 @@
 <table>
    <thead>
       <tr>
-        <th>Title</th>
-        <th>opinion</th>
+        <th>image</th>
+        <th>name</th>
         <th colspan="3"></th>
       </tr>
    </thead>
@@ -42,7 +38,7 @@
    <tbody>
       <tr>
         <td><%= image_tag 'default-image.jpg', size: "width,height" %></td>
-        <td><%=user.name%></td>
+        <td></td>
       </tr>
    </tbody>
    <% end %>
