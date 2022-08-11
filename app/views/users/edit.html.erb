@@ -3,13 +3,13 @@
 <%= form_with model: @user,url: update_user_path(@user.id), method: :patch do |f| %>
 
   <h4>Name</h4>
-  <%= f.text_field :name %>
+  <%= f.text_field @user.name %>
 
   <h4>Image</h4>
   <%= f.file_field :profile_image, accept: "image/*" %>
 
   <h4>introduction</h4>
-  <%= f.text_area :introduction %>
+  <%= f.text_area @user.introduction %>
 
   <%= f.submit 'Update User' %>
 

@@ -8,25 +8,13 @@
   <% end %>
 
   <p>name</p>
-  <span><%= @user %></span>
+  <span><%= @user.name %></span>
 
   <p>introduction</p>
-  <span></span>
-
-<%= form_with model: @user,ul:'users/:id' ,method: :post do |f| %>
-
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-
-  <h4>Opinion</h4>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'Create Book' %>
-
-<% end %>
+  <span><%= @user.introduction %></span>
 
 <h2>Users</h2>
-<table>
+<table class="table table-striped">
    <thead>
       <tr>
         <th>image</th>
