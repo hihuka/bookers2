@@ -1,3 +1,30 @@
+<h1>User Info</h1>
 
-<h2>users/show</h2>
 
+  <% if @user.profile_image.attached? %>
+    <%= image_tag @user.profile_image, size: "width,height" %>
+  <% else %>
+    <%= image_tag 'no_image.jpg', size: "width,height" %>
+  <% end %>
+
+  <p>name</p>
+  <span><%= @user.name %></span>
+
+  <p>introduction</p>
+  <span><%= @user.introduction %></span>
+
+
+  <h2>Books</h2>
+<div class="container">
+  <div class="row">
+<table class="table table-striped">
+   <thead>
+      <tr>
+        <th>Title</th>
+        <th>opinion</th>
+        <th colspan="3"></th>
+      </tr>
+   </thead>
+</table>
+  </div>
+</div>
