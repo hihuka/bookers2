@@ -1,0 +1,11 @@
+<h1>User Info</h1>
+
+ <%= image_tag user.get_profile_image(100,100) %>
+
+  <p>name</p>
+  <span><%= user.name %></span>
+
+  <p>introduction</p>
+  <span><%= user.introduction %></span>
+
+  <%= link_to "edit", edit_user_path(user.id) %>

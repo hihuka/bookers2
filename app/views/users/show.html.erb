@@ -1,13 +1,5 @@
-<h1>User Info</h1>
-
-<%= image_tag @user.get_profile_image(100,100) %>
-
-  <p>name</p>
-  <span><%= @user.name %></span>
-
-  <p>introduction</p>
-  <span><%= @user.introduction %></span>
-
+<%= render 'user', user: @user %>
+<%= render 'books/book', book: @book %>
 
   <h2>Books</h2>
 <div class="container">
