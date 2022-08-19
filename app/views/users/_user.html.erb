@@ -1,10 +1,10 @@
 <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-<div class="container px-5 px-sm-0">
-  <div class="row">
-    <div class="col-md-3">
+<div class=".container md-5 ">
+  <div class=".row">
+    <div class=".col-md-3">
       <h2>User info</h2>
       <%= image_tag user.get_profile_image(100,100) %>
-  <tbody><tr></tr>
+  <table class="table table-striped">
   <tr>
 	  <th>name</th>
 	  <th><%= user.name %></th>
@@ -12,12 +12,9 @@
   <tr>
 	  <th>introduction</th>
 	  <th><%= user.introduction %></th>
-  </tr>
-</tbody></table>
+	</tr>
+	</table>
 
-<div class ="row">
-  <%= link_to edit_user_path, class: "nav-link text-light" do %>
-   <i class="fas fa-user-cog"></i> Edit
+<%= link_to edit_user_path(user.id) do %>
+   <i class="fas fa-user-cog"></i>
   <% end %>
-  </div>
-<%= link_to "edit", edit_user_path(user.id) %>
