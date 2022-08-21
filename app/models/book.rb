@@ -4,4 +4,5 @@ class Book < ApplicationRecord
 
      validates :title, presence: true
      validates :opinion, presence: true
+     validates :opinion,length: { maximum: 200 }
 end

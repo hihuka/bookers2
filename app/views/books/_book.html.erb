@@ -1,5 +1,4 @@
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-  
+<div class="col-lg-2">
   <h2>New book</h2>
 <% if book.errors.any? %>
   <%= book.errors.count %>errors prohibited this book from being saved:
@@ -21,3 +20,4 @@
   <%= f.submit 'Create Book' %></br>
 
 <% end %>
+</div>

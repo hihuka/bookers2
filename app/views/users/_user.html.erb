@@ -1,7 +1,4 @@
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-<div class=".container md-5 ">
-  <div class=".row">
-    <div class=".col-md-3">
+<div class="col-lg-2">
       <h2>User info</h2>
       <%= image_tag user.get_profile_image(100,100) %>
   <table class="table table-striped">
@@ -18,3 +15,4 @@
 <%= link_to edit_user_path(user.id) do %>
    <i class="fas fa-user-cog"></i>
   <% end %>
+</div>
