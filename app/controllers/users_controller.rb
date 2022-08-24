@@ -8,8 +8,8 @@ before_action :authenticate_user!
 
   def show
     @user = User.find(params[:id])
+    @users = User.all
     @book = Book.new
-    @users = current_user
   end
 
   def edit
