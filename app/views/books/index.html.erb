@@ -1,4 +1,12 @@
 <div class="container">  <!-- この行を追加 -->
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
   <div class="row">      <!-- この行を追加 -->
 <div class="col-md-4">
  <%= render 'users/user', user: @user %>
