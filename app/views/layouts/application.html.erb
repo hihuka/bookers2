@@ -24,40 +24,52 @@
        <ul class="navbar-nav ml-auto">
 
      <% if user_signed_in? %>
+      <li>
       <%= link_to user_path(current_user), class: "nav-link text-light" do %>
        <i class="fas fa-home"></i> Home
       <% end %>
-
-      <%= link_to users_path, class: "nav-link text-light" do %>
+      </li>
+      <li>
+       <%= link_to users_path, class: "nav-link text-light" do %>
        <i class="fas fa-users"></i> Users
-      <% end %>
-
-      <%= link_to books_path, class: "nav-link text-light" do  %>
+       <% end %>
+      </li>
+      <li>
+       <%= link_to books_path, class: "nav-link text-light" do  %>
        <i class="fas fa-book-open"></i> Books
-      <% end %>
-
-      <%= link_to destroy_user_session_path, method: :get, class: "nav-link text-light" do %>
+       <% end %>
+      </li>
+      <li>
+       <%= link_to destroy_user_session_path, method: :get, class: "nav-link text-light" do %>
        <i class="fas fa-sign-out-alt"></i> Log out
-      <% end %>
+       <% end %>
+      </li>
 
      <% else %>
-      <%= link_to root_path, class: "nav-link text-light" do %>
+     <li>
+       <%= link_to root_path, class: "nav-link text-light" do %>
        <i class="fas fa-home"></i> Home
-      <% end %>
-
+       <% end %>
+     </li>
+     <li>
       <%= link_to home_about_path, class: "nav-link text-light" do %>
        <i class="fas fa-link"></i> About
       <% end %>
-
-       <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
-       <i class="fas fa-user-plus"></i> Sign up
+     </li>
+     <li>
+      <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
+       <i class="fas fa-user-plus"></i> Signup
        <% end %>
-
-       <%= link_to new_user_session_path, class: "nav-link text-light" do %>
-       <i class="fas fa-sign-out-alt"></i> Log in
+     </li>
+     <li>
+      <%= link_to new_user_session_path, class: "nav-link text-light" do %>
+       <i class="fas fa-sign-in-alt"></i> Login
        <% end %>
+     </li>
 
      <% end %>
+     </ul>
+     </div>
      </div>
     </nav>
    </header>

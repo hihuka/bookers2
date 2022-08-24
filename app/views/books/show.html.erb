@@ -1,15 +1,14 @@
 <div class="container ">  <!-- この行を追加 -->
   <div class="row">      <!-- この行を追加 -->
     <div class="col-md-3">
+     <h2>User info</h2>
      <%= render 'users/user', user: @user %>
+     <h2 class="mt-3">New book</h2>
      <%= render 'book', book: @books%>
     </div>
    <div class="col-md-8 offset-md-1">
      <h2>Book detail</h2>
-   <div class="container">
-    <div class="row">
    <table class="table table-striped">
-    <tbody>
      <tr>
        <td><%= link_to user_path(@user.id) do %>
          <%= image_tag @user.get_profile_image(100,100) %><br>
@@ -32,10 +31,7 @@
       <% end %>
      </td>
     </tr>
-   </tbody>
   </table>
-</div>
-</div>
 </div>
 </div>
 </div>

@@ -14,6 +14,11 @@ before_action :authenticate_user!
 
   def edit
     @user = User.find(params[:id])
+    if @user == current_user
+      render "edit"
+    else
+      redirect_to user_path(current_user.id)
+    end
   end
 
   def update
@@ -29,5 +34,6 @@ before_action :authenticate_user!
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
   end
+
 
 end

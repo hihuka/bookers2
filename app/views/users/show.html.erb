@@ -1,13 +1,13 @@
 <div class="container px-5 px-sm-0">  <!-- この行を追加 -->
   <div class="row">      <!-- この行を追加 -->
   <div class="col-md-3">
+    <h2>User info</h2>
     <%= render 'user', user: @user %>
+    <h2 class="mt-3">New book</h2>
     <%= render 'books/book', book: @book %>
   </div>
 <div class="col-md-8 offset-md-1">
   <h2>Books</h2>
-<div class="container">
-  <div class="row">
    <table class="table table-striped">
      <thead>
         <tr>
@@ -25,7 +25,7 @@
           <% if @user.profile_image.attached? %>
           <%= image_tag @user.profile_image, size: "100x100" %>
           <% else %>
-          <%= image_tag 'no_image.jpg', size: "width,height" %>
+          <%= image_tag 'no_image.jpg', size: "100x100" %>
           <% end %>
           </td>
           <td>
@@ -36,6 +36,4 @@
       </tbody>
       <% end %>
    </table>
-  </div>
-</div>
 </div>
